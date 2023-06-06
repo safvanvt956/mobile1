@@ -1,0 +1,137 @@
+.fl{
+    display: flex;
+    gap: 31px;
+}
+.fl1{
+    width: 15rem;
+    height: 35px;
+}
+
+.cn{
+    width: 32rem;
+    height: 35px;
+}
+
+.cy{
+    width: 513px;
+    height: 35px;
+}
+
+.sa{
+    width: 32rem;
+    height: 35px;
+}
+
+.tc{
+    width: 32rem;
+    height: 35px;
+}
+.on{
+    width: 32rem;
+}
+
+
+
+.IDK{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.right{
+    display: flex;
+    justify-content: space-between;  
+}
+.box{
+    width: 400px;
+    height: 500px;
+    background-color: rgba(230, 203, 154, 0.651);
+    border-radius: 5px;
+}
+.cartbox{
+    padding: 20px;
+}
+
+.cartbox p{
+    padding-top: 20px;
+}
+
+
+
+.wb{
+    border: none;
+    width: 365px;
+    height: 2rem;
+}
+.wb, .placeholder{
+    font-size: 10px;
+}
+.pe{
+    border: none;
+    width: 365px;
+    height: 3rem;
+}
+.pe, .placeholder{
+    font-size: 10px;
+}
+
+.theela{
+    border: none;
+    width: 400px;
+    height: 2rem;
+    color: white;
+    background: rgb(28, 172, 172);
+}
+
+
+@media (max-width:929px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 200px;
+    }
+}
+@media (max-width:831px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 150px;
+    }
+}
+@media (max-width:729px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 110px;
+    }
+}
+@media (max-width:660px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 70px;
+    }
+}
+@media (max-width:591px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 40px;
+    }
+}
+@media (max-width:562px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 30px;
+    }
+}
+@media (max-width:544px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 20px;
+    }
+}
+@media (max-width:531px) {
+    .IDK{
+        flex-direction: column;
+        margin-left: 10px;
+    }
+}

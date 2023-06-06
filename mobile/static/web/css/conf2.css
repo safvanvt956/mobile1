@@ -1,0 +1,103 @@
+table, th, td {
+    border:1px solid white;
+    position: relative;
+    left: 1px;
+  
+  }
+
+.dear{
+    text-align: center;
+}
+
+th,td{
+    height: 40px;
+    background-color: bisque;
+    border: none;
+    padding: 2%;
+}
+
+input{
+    height: 25px;
+}
+
+.cf{
+    width: 17%;
+    height: 35px;
+    background-color: bisque;
+    color: #000;
+    border: none;
+    position: relative;
+    left: 1px;
+}
+
+.cf:hover{
+    background-color: rgb(222, 189, 148);
+}
+
+img{
+    position: relative;
+    height: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+@media(max-width:752px){
+    th ,td{
+        position: relative;
+        left: -5px;
+    }
+
+    
+}
+
+@media(max-width:749px){
+    th ,td{
+        position: relative;
+        left: 3px;
+    }
+}
+
+@media(max-width:738px){
+    th ,td{
+        position: relative;
+        left: -3px;
+    }
+
+    th,.one{
+        width: 3px;
+    }
+}
+
+@media(max-width:666px){
+    .two,td{
+        position: relative;
+     margin-left: -4px;   
+    }
+}
+
+@media(max-width:376px){
+    th,td{
+        position: relative;
+        width: 110%;
+    }
+}
+
+/* @media(max-width:700px){
+    table{
+
+        flex-direction: column;
+        position: absolute;
+
+    }
+} */
+
+@media(max-width:692px){
+    .two ,th{
+        font-size: 10px;
+        margin-left: -6px;
+        
+    }
+}

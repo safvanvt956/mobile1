@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'web/css/right.css' %}">
+    
+</head>
+<body>
+
+
+    <div class="dear">
+        <div class="right">
+            <img src="{% static 'web/img/right.avif' %}" alt="">
+        </div>
+        <div class="r1">
+            <p>Thank you for Ordering in Our Store Will Receive A Confirmation Email Shortly</p>
+        </div>
+        <div class="r1">
+            <a href="{% url 'index' %}"><input type="submit" value="Continue Shopping"></a>
+        </div>
+    </div>
+    
+</body>
+</html>

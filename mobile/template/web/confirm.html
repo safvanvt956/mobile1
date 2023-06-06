@@ -1,0 +1,56 @@
+{% load static %}
+{% load cart_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'web/css/conf2.css' %}">
+</head>
+<body>
+
+
+    
+
+       
+        <div>
+            <h1>Your order items</h1>
+        </div>
+        <div class="dear">
+          <form action="" method="POST">
+            {% csrf_token %}
+            <table style="width:100%">
+                <tr>
+                  <th>IMAGE</th>
+                  <th>PRODUCT NAME</th>
+                  <th class="two">UNTIL PRICE</th>
+                  <th>QTY</th>
+                  <th class="one">SUBTOTAL</th>
+                </tr>
+                <tr>
+                  {% for key,value in request.session.cart.items %}
+                  <td><img src="{{value.image}}" alt=""></td>
+                  <td>{{value.name}}</td>
+                  <td class="two">{{value.price}}</td>
+                  <td><input type="number"placeholder="{{value.quantity}}"></td>
+                  <td>{{cart_total_amount|add:20|add:10}}</td>
+                  {% endfor %}
+                </tr>
+            </table>
+        </div>
+        <br>
+
+        <div>
+         {% comment %} <a href="{% url 'right' %}"><input type="submit" value="CONFIRM" class="cf" id=""></a> {% endcomment %}
+         <a href="{% url 'right' %}"><button class="cf">CONFIRM</a></button>
+        </div>
+
+      </form>
+                  
+                
+                
+                  
+  </body>
+</html>
