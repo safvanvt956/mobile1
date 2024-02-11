@@ -8,6 +8,10 @@ class Product(models.Model):
     price =models.IntegerField()
     image =models.ImageField(upload_to='media/product_image')
 
+    def __str__(self):
+        return self.name
+    
+
 
 
 class Order(models.Model):
@@ -22,9 +26,9 @@ class Order(models.Model):
     Phone=models.IntegerField()
     Email=models.EmailField(max_length=50)
 
-
-
-
+    def __str__(self):
+        return self.Firstname
+    
 class OrderItem(models.Model):
      order=models.ForeignKey(Order,on_delete=models.CASCADE)
      product=models.CharField(max_length=50)
@@ -33,3 +37,31 @@ class OrderItem(models.Model):
      price=models.IntegerField()
      total=models.IntegerField()
      paid=models.BooleanField(default=False)
+
+     def __str__(self):
+         return self.product
+     
+
+class from_date(models.Model):
+    
+    Email=models.EmailField()
+
+
+
+class contact_date(models.Model):
+    Name=models.CharField(max_length=100)
+    Email=models.EmailField(max_length=100)
+    Subject=models.CharField(max_length=100)
+    Message=models.CharField(max_length=100)
+
+
+
+class Leave(models.Model):
+    Name=models.CharField(max_length=100)
+    Email=models.EmailField(max_length=100)
+    website=models.CharField(max_length=100)
+    comment=models.CharField(max_length=100)
+
+
+
+    

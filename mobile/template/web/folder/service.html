@@ -5,13 +5,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PET SHOP - Pet Shop Website Template</title>
+    <title>Mobile SHOP - mobile Shop Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'web/img/mp.jpg' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,6 +29,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'web/css/style1.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -69,8 +71,8 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
-        <a href="index.html" class="navbar-brand ms-lg-5">
-            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Mob Shop</h1>
+        <a href="{% url 'index' %}" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark"><i class="fa-solid fa-mobile-screen-button fa-xs" style="color: #18a028;"></i> Mobile Shops</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -103,14 +105,15 @@
         <div class="container">
             <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
                 <h6 class="text-primary text-uppercase">Services</h6>
-                <h1 class="display-5 text-uppercase mb-0">Our Excellent Pet Care Services</h1>
+                <h1 class="display-5 text-uppercase mb-0">Our Excellent Care Services</h1>
             </div>
             <div class="row g-5">
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-house display-1 text-primary me-4"></i>
+                       
+                        <i class="fa-solid fa-plane display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Boarding</h5>
+                            <h5 class="text-uppercase mb-3">Airplane</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -118,9 +121,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-food display-1 text-primary me-4"></i>
+                        <i class="fa-regular fa-user display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Feeding</h5>
+                            <h5 class="text-uppercase mb-3">Contact</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -128,9 +131,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-grooming display-1 text-primary me-4"></i>
+                        <i class="fa-solid fa-wifi display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Grooming</h5>
+                            <h5 class="text-uppercase mb-3">Wi-Fi</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -138,9 +141,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-cat display-1 text-primary me-4"></i>
+                        <i class="fa-solid fa-signal display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Training</h5>
+                            <h5 class="text-uppercase mb-3">Signal</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -148,9 +151,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-dog display-1 text-primary me-4"></i>
+                        <i class="fa-solid fa-toggle-off display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Exercise</h5>
+                            <h5 class="text-uppercase mb-3">Toggal -off</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -158,9 +161,9 @@
                 </div>
                 <div class="col-md-6">
                     <div class="service-item bg-light d-flex p-4">
-                        <i class="flaticon-vaccine display-1 text-primary me-4"></i>
+                        <i class="fa-solid fa-comment-sms display-1 text-primary me-4"></i>
                         <div>
-                            <h5 class="text-uppercase mb-3">Pet Treatment</h5>
+                            <h5 class="text-uppercase mb-3">Message</h5>
                             <p>Kasd dolor no lorem sit tempor at justo rebum rebum stet justo elitr dolor amet sit</p>
                             <a class="text-primary text-uppercase" href="">Read More<i class="bi bi-chevron-right"></i></a>
                         </div>
@@ -358,9 +361,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
-                    <form action="">
+                    <form action="" method="POST">
+                        {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Your Email">
+                            <input type="text" class="form-control p-3" placeholder="Your Email" name="email">
                             <button class="btn btn-primary">Sign Up</button>
                         </div>
                     </form>

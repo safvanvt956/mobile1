@@ -113,7 +113,7 @@
 }
 
 .hero-header {
-    background: url(../img/iph.jpg) top right no-repeat;
+    background: url(../img/mob.jpg) top right no-repeat;
     background-size: cover;
 }
 
@@ -281,7 +281,7 @@
 }
 
 .bg-offer {
-    background: url(../img/F1.png) top right no-repeat;
+    background: url(../img/offer.jpg) top right no-repeat;
     background-size: cover;
 }
 
@@ -378,6 +378,41 @@
 }
 
 .team-item:hover .team-overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+}
+
+
+/* product */
+
+
+
+.pb-5 img {
+    transition: .5s;
+}
+
+.pb-5:hover img {
+    transform: scale(1.2);
+}
+
+.pb-5 .aaaa {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    bottom: 45px;
+    left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(122, 183, 48, .8);
+    transition: .5s;
+    opacity: 0;
+}
+
+.pb-5:hover .aaaa {
     top: 0;
     right: 0;
     bottom: 0;

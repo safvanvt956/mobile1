@@ -6,13 +6,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PET SHOP - Pet Shop Website Template</title>
+    <title>Mobile SHOP - mobile Shop Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{% static 'web/img/mp.jpg' %}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,6 +30,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'web/css/style1.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -70,8 +72,8 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0 mb-5">
-        <a href="index.html" class="navbar-brand ms-lg-5">
-            <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Mob Shop</h1>
+        <a href="{% url 'index' %}" class="navbar-brand ms-lg-5">
+            <h1 class="m-0 text-uppercase text-dark"><i class="fa-solid fa-mobile-screen-button fa-xs" style="color: #18a028;"></i> Mobile Shops</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -110,56 +112,96 @@
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
                         <img class="img-fluid mb-4" src="{% static 'web/img/oppo.png' %}" alt="">
-                        <h6 class="text-uppercase">Quality Pet Foods</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
+                        <h6 class="text-uppercase">Oppo</h6>
+                        <h5 class="text-primary mb-0">₹ 199.00</h5>
+                        <div class="aaaa">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#">Buy</i></a>
+                                
+                            </div>
                         <div class="btn-action d-flex justify-content-center">
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-heart"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
+                     </div> 
                     </div>
                 </div>
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
                         <img class="img-fluid mb-4" src="{% static 'web/img/vivo.jpg' %}" alt="">
-                        <h6 class="text-uppercase">Quality Pet Foods</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
+                        <h6 class="text-uppercase">Vivo</h6>
+                        <h5 class="text-primary mb-0">₹ 199.00</h5>
+                        <div class="aaaa">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#">Buy</i></a>
+                                
+                            </div>
                         <div class="btn-action d-flex justify-content-center">
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-heart"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
+                     </div> 
                     </div>
                 </div>
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
                         <img class="img-fluid mb-4" src="{% static 'web/img/mp.jpg' %}" alt="">
-                        <h6 class="text-uppercase">Quality Pet Foods</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
+                        <h6 class="text-uppercase">Iphone</h6>
+                        <h5 class="text-primary mb-0">₹ 199.00</h5>
+                        <div class="aaaa">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#">Buy</i></a>
+                                
+                            </div>
                         <div class="btn-action d-flex justify-content-center">
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-heart"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
+                     </div> 
                     </div>
                 </div>
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
                         <img class="img-fluid mb-4" src="{% static 'web/img/1sam.jpg' %}" alt="">
-                        <h6 class="text-uppercase">Quality Pet Foods</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
+                        <h6 class="text-uppercase">Samsung</h6>
+                        <h5 class="text-primary mb-0">₹ 199.00</h5>
+                        <div class="aaaa">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#">Buy</i></a>
+                                
+                            </div>
                         <div class="btn-action d-flex justify-content-center">
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-heart"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
+                     </div> 
                     </div>
                 </div>
                 <div class="pb-5">
                     <div class="product-item position-relative bg-light d-flex flex-column text-center">
                         <img class="img-fluid mb-4" src="{% static 'web/img/mp.jpg' %}" alt="">
-                        <h6 class="text-uppercase">Quality Pet Foods</h6>
-                        <h5 class="text-primary mb-0">$199.00</h5>
+                        <h6 class="text-uppercase">Iphone</h6>
+                        <h5 class="text-primary mb-0">₹ 199.00</h5>
+                        <div class="aaaa">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <a class="btn btn-light btn-square mx-1" href="#">Buy</i></a>
+                                
+                            </div>
                         <div class="btn-action d-flex justify-content-center">
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
                             <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-eye"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-heart"></i></a>
+                            <a class="btn btn-primary py-2 px-3" href=""><i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
+                     </div> 
                     </div>
                 </div>
             </div>
@@ -168,7 +210,7 @@
     <!-- Products End -->
 
 
-    <!-- Offer Start -->
+    {% comment %} <!-- Offer Start -->
     <div class="container-fluid bg-offer my-5 py-5">
         <div class="container py-5">
             <div class="row gx-5 justify-content-start">
@@ -184,7 +226,32 @@
             </div>
         </div>
     </div>
-    <!-- Offer End -->
+    <!-- Offer End --> {% endcomment %}
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="{% static 'web/img/F1.png' %}" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="border-start border-5 border-primary ps-5 mb-5">
+                        <h6 class="text-primary text-uppercase">Special Offer</h6>
+                        <h1 class="display-5 text-uppercase mb-0">Save 50% on all items your first order</h1>
+                    </div>
+                    <h6 class="text-body mb-4">Eirmod sed tempor lorem ut dolores sit kasd ipsum. Dolor ea et dolore et at sea ea at dolor justo ipsum duo rebum sea. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo lorem. Elitr ut dolores magna sit. Sea dolore sed et.</h6>
+                    <br><br>
+                    <a href="" class="btn btn-info py-md-3 px-md-5 me-3">Shop Now</a>
+                    <a href="" class="btn btn-outline-info py-md-3 px-md-5">Read More</a>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
 
     <!-- Pricing Plan Start -->
@@ -335,9 +402,10 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
-                    <form action="">
+                    <form action="" method="POST">
+                        {% csrf_token %}
                         <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Your Email">
+                            <input type="text" class="form-control p-3" placeholder="Your Email" name="email">
                             <button class="btn btn-primary">Sign Up</button>
                         </div>
                     </form>

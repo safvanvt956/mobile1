@@ -29,15 +29,15 @@
                   <th>QTY</th>
                   <th class="one">SUBTOTAL</th>
                 </tr>
+                {% for key,value in request.session.cart.items %}
                 <tr>
-                  {% for key,value in request.session.cart.items %}
                   <td><img src="{{value.image}}" alt=""></td>
                   <td>{{value.name}}</td>
                   <td class="two">{{value.price}}</td>
                   <td><input type="number"placeholder="{{value.quantity}}"></td>
                   <td>{{cart_total_amount|add:20|add:10}}</td>
-                  {% endfor %}
                 </tr>
+                {% endfor %}
             </table>
         </div>
         <br>

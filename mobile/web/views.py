@@ -1,18 +1,33 @@
 from django.shortcuts import render,redirect
 from . models import Product,Order,OrderItem
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from cart.cart import Cart
+from . models import from_date
+from . models import contact_date,Leave
+
 
 # Create your views here.
 def index(request):
     context = {
         'hello' : Product.objects.all()
     }
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
 
     return render(request,"web/index.html",context)
+
+
+
 
 
 def login1(request):
@@ -33,6 +48,9 @@ def login1(request):
     return render(request,'web/account/login.html')
 
 
+
+
+
 def signup1(request):
     if request.method=="POST":
         Username=request.POST.get('name_1')
@@ -51,37 +69,195 @@ def signup1(request):
     return render(request,'web/account/signup.html')   
 
 
-def signout1(request):
-     return render(request,'web/account/login.html')
+
+
+def signview(request):
+    logout(request)
+    return render(request,'web/account/login.html')
+
+
+
 
 
 
 def about(request):
-     return render(request,'web/folder/about.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/about.html')
+
+
+
+
 
 def service(request):
-     return render(request,'web/folder/service.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/service.html')
+
+
+
 
 def product(request):
-     return render(request,'web/folder/product.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/product.html')
+
+
+
 
 def price(request):
-     return render(request,'web/folder/price.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/price.html')
+
+
+
 
 def team(request):
-     return render(request,'web/folder/team.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/team.html')
+
+
+
+
 
 def contact(request):
-     return render(request,'web/folder/contact.html')
+    if request.method=="POST":
+        if request.POST.get("form_type")=='form2':
+            email=request.POST.get("email")
+
+            form_1 = from_date(
+        
+                Email = email)
+        
+        
+            form_1.save()
+
+        elif request.POST.get("form_type")=='form1':
+           
+            name=request.POST.get("name_2")
+            email=request.POST.get("email_2")
+            subject=request.POST.get("sub")
+            message=request.POST.get("mes")
+
+            form_2 = contact_date(
+
+                Name = name,
+                Email = email,
+                Subject = subject,
+                Message = message
+
+            
+            )
+            form_2.save()
+
+        
+    return render(request,'web/folder/contact.html')
+
+
+
+
 
 def testimonial(request):
-     return render(request,'web/folder/testimonial.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/testimonial.html')
+
+
+
+
 
 def blog(request):
-     return render(request,'web/folder/blog.html')
+    if request.method=="POST":
+        email=request.POST.get("email")
+
+        form_1 = from_date(
+        
+            email = email
+        
+        )
+        form_1.save()
+    return render(request,'web/folder/blog.html')
+
+
+
+
+
 
 def detail(request):
-     return render(request,'web/folder/detail.html')
+    if request.method=="POST":
+        if request.POST.get("formtype")=="form4":
+         email=request.POST.get("email")
+
+         form_1 = from_date(
+        
+            Email = email
+        
+         )
+         form_1.save()
+
+        elif request.POST.get("formtype")=="form3":
+            name=request.POST.get("name_3")
+            email=request.POST.get("email_3")
+            website=request.POST.get("web")
+            comment=request.POST.get("com")
+
+            form_1 = Leave(
+                Name = name,
+                Email = email,
+                website = website,
+                comment = comment
+            )
+
+            form_1.save()
+
+
+    return render(request,'web/folder/detail.html')
+
+
 
 
 
@@ -138,6 +314,8 @@ def cart_detail(request):
 @login_required(login_url="login")
 def checkout(request):
     return render(request, 'web/checkout.html')
+
+
 
 
 @login_required(login_url="login")

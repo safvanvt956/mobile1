@@ -7,12 +7,12 @@ urlpatterns = [
   path('',views.index,name="index"),
   path('login',views.login1,name="login"),
   path('signup',views.signup1,name="signup"),
-  path('signout',views.signout1,name='signout'),
+  path('signout',views.signview,name='signout'),
 
 
   path('about',views.about,name='about'), 
   path('service',views.service,name='service'),
-  path('product',views.product,name='product'),    
+  path('product/',views.product,name='product'),    
   path('price',views.price,name='price'),
   path('team',views.team,name='team'),
   path('contact',views.contact,name='contact'),
